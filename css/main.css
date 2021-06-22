@@ -168,7 +168,13 @@ header {
 header img {
   height: 100px;
   position: center;
-  padding-left: 0;
+  padding-left: 25%;
+}
+
+#navbar {
+  width: 100%;
+  margin-right: 20px;
+  align-items: center;
 }
 
 #navbar a {
@@ -179,8 +185,8 @@ header img {
 }
 
 #navbar nav {
-  margin-right: 50px;
-  margin-top: 50px;
+  padding-top: 60px;
+
 }
 
 
