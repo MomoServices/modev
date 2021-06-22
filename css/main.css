@@ -159,19 +159,46 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
   margin: 0;
   background-color: black;
   background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/joshua-reddekopp.jpg");
-
-
-
 
 }
 
 header img {
   height: 100px;
   position: center;
+  padding-left: 0;
+}
+
+#navbar a {
+  width: 100%;
+  position: relative;
+  justify-content: space-around;
+  margin-left: auto;
+}
+
+#navbar nav {
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 
@@ -190,8 +217,9 @@ header nav ul {
 
 nav {
   height: 2vh;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   width: 100%;
+
   /*---- background: #5b78c7; -----*/
 }
 
@@ -243,6 +271,12 @@ footer .Copyright {
 /* Hero Area */
 
 @media screen and (max-width: 768px) {
+
+
+#navbar nav {
+  margin-top: 50px;
+}
+
 
   .menu-btn {
   position: relative;
@@ -447,6 +481,8 @@ address {
 }
 
 email {
+
+}
   /* ----------------- Mobile First Ends ----------- */
 
 /* ==========================================================================
