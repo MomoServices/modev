@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
+
   <!-- FontAwesome CDN version 5.5 -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -67,7 +68,7 @@
     <section class="hero-area">
       <div class="content-wrapper">
         <h1>Hi, I'm Morayo.</h1>
-        <h2>Front End Developer</h2>
+        <h2>Front-End Engineer</h2>
         <h3> let's <span>create</span> <br>
           something awesome</h3>
 
@@ -75,7 +76,7 @@
 
     <section id="section06"
      class="demo">
-<a href="#section06"><span></span>Scroll</a>
+<a href="#section06"><span></span>Portfolio</a>
 </section>
     <!-- Scroll One End --->
   </div>
@@ -89,7 +90,7 @@
 
 
 
-      <section class="my-portfolio">
+    <section class="my-portfolio">
 
       <div class="content-wrapper">
 
@@ -153,25 +154,155 @@
   </section>
  </div>
 </section>
+    <!--- Portolio Ends ---->
+
+      <hr class="solid-border-two">
+
+      <!--- About Me Starts ----->
 
     <aside>
+
       <div class="content-wrapper">
 
         <div class="about-me">
 
-          <h2>about me</h2>
+          <h2>About Me</h2>
 
-          <h3>I am passionate about web.</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="center-left">
+              <p> There’s nothing I love more than channelling ideas from the imaginary into the real world. My two loves are Music Production, and Coding. If you’d like to know more about me, click here.</p>
+            </div>
 
-          <p>Ready when you are!</p>
 
+     <style>
+          * {box-sizing: border-box;}
+          .mySlides {display: none;}
+          img {vertical-align: middle;}
+
+          /* Slideshow container */
+          .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin-left: 50%;
+          overflow: hidden;
+            }
+
+          .active {
+          background-color: #f9f7f8;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+              }
+
+            @keyframes fade {
+              from {opacity: .4}
+              to {opacity: 1}
+                }
+
+                /* Mobile */
+            @media only screen and (max-width: 768px){
+              .slideshow-container {
+              max-width: 1000px;
+              width: 80%;
+              position: relative;
+              margin-left: 250px;
+              margin-bottom: 0;
+              overflow: hidden;
+                }
+            }
+              /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+              }
+      </style>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="img/morayo-one.jpg" style="width:100%">
         </div>
+
+        <div class="mySlides fade">
+          <img src="img/morayo-two.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/morayo-three.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/morayo-four.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/morayo-five.jpg"
+          style="width:100%">
+        </div>
+    </div>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
-    </aside>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 400); // Change image every 2 seconds
+      }
+    </script>
+   </div>
+  </div>
+
+</aside>
+    <!--- "About Me" Ends ---->
+
+  <!--- "Sevices Page Starts--->
+<div class="tech-services">
+  <div class="content-wrapper">
+      <h1> Services </h1>
+
+ <div class="services">
+    <nav>
+     <ul class="service-links">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+  </nav>
+ </div>
+ </div>
+</div>
+
+</main>
+
+  <!--- "Services Page Ends"  -->
 
     <footer>
       <div class="content-wrapper">
+        <div class="footer-content">
+          <div class="contact">
         <h3> Let's connect </h3>
 
         <h4>Hire me</h4>
@@ -180,6 +311,8 @@
           <email>morayobusinesses@gmail.com</email>
         </address>
       </div>
+    </div>
+  </div>
 
       <div class="social">
         <h4>Follow me</h4>
@@ -205,9 +338,12 @@
     </div>
 
   </footer>
-</main>
 
 
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+<!--- JQuery link for html code. -->
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>

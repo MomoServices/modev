@@ -1,3 +1,6 @@
+
+$(document).ready(function(){
+
 // Nav open tab (Mobile design) ANIMATION
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
@@ -93,3 +96,10 @@ let span = document.getElementsByTagName('span');
 	}
 	span[1].onclick = ()=>{right_mover();}
 	span[0].onclick = ()=>{left_mover();}
+
+
+  // "About Me" Starts
+
+// "About me" images code under HTML code
+
+});
