@@ -438,7 +438,7 @@ section::after {
   background-position: center;
   align-items: center;
   width: 100vw;
-  min-height: 100%;
+  min-height: 100vh;
   text-align: center;
   background-color: black;
 	margin: 0;
@@ -451,7 +451,7 @@ section::after {
 .my-portfolio p span{
     display: flex;
 		font-size: 50px;
-		margin: 0 5px;
+		margin: 0 5px 0;
 		cursor: pointer;
 		color: #555;
 		width: 30px;
