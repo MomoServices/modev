@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+
 
 // Nav open tab (Mobile design) ANIMATION
 const menuBtn = document.querySelector('.menu-btn');
@@ -46,14 +46,6 @@ function myFunction() {
   }
 }
 
-// Scroll command
-
-$(function() {
-  $('.my-portfolio').on('click', function(e) {
-    e.preventDefault();
-    $('html, main').animate({ scrollTop: $($(this).attr('class')).offset().top}, 500, 'linear');
-  });
-});
 
 // Hero Ends
 
@@ -102,4 +94,73 @@ let span = document.getElementsByTagName('span');
 
 // "About me" images code under HTML code
 
+// Contact buttons i think from portfolio template ...
+
+links.forEach((link) => link.addEventListener("click", () => closeMenu()));
+
+filter_btns.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    filter_btns.forEach((button) => button.classList.remove("active"));
+    btn.classList.add("active");
+
+    let filterValue = btn.dataset.filter;
+
+    $(".grid").isotope({ filter: filterValue });
+  })
+);
+
+$(".grid").isotope({
+  itemSelector: ".grid-item",
+  layoutMode: "fitRows",
+  transitionDuration: "0.6s",
+});
+
+window.addEventListener("scroll", () => {
+  skillsEffect();
+  countUp();
+});
+
+function checkScroll(el) {
+  let rect = el.getBoundingClientRect();
+  if (window.innerHeight >= rect.top + el.offsetHeight) return true;
+  return false;
+}
+
+function skillsEffect() {
+  if (!checkScroll(skills_wrap)) return;
+  skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
+}
+
+function countUp() {
+  if (!checkScroll(records_wrap)) return;
+  records_numbers.forEach((numb) => {
+    const updateCount = () => {
+      let currentNum = +numb.innerText;
+      let maxNum = +numb.dataset.num;
+      let speed = 100;
+      const increment = Math.ceil(maxNum / speed);
+
+      if (currentNum < maxNum) {
+        numb.innerText = currentNum + increment;
+        setTimeout(updateCount, 1);
+      } else {
+        numb.innerText = maxNum;
+      }
+    };
+
+    setTimeout(updateCount, 400);
+  });
+}
+
+var mySwiper = new Swiper(".swiper-container", {
+  speed: 1100,
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
 });
